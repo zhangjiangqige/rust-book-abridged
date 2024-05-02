@@ -36,8 +36,6 @@ jobs:
     permissions:
       contents: write
     needs: build
-    # Generate a new release every time there's a tag.
-    if: startsWith(github.ref, 'refs/tags/')
     steps:
       - name: Download build artifacts
         uses: actions/download-artifact@v3
